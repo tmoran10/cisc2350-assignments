@@ -1,1 +1,1 @@
-THIS IS A README
+Timmy Moran CISC2350 class repo
