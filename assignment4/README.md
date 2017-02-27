@@ -1,1 +1,1 @@
-This file contains new .html code for a resume page, and the .html code for my bio from assignment1 (this time with a link to the resume page).  For my midterm I am going to spruce up my bio, and add a lot of CSS to make the two pages look more professional.
+This directory contains new .html code for a resume page, and the .html code for my bio from assignment1 (this time with a link to the resume page).  For my midterm I am going to spruce up my bio, and add a lot of CSS to make the two pages look more professional.
