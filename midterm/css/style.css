@@ -144,3 +144,30 @@ footer {
 footer.bio {
 	color: #0000FF;
 }
+
+@page{
+		size: portrait;
+}
+
+@media print{
+	img {
+		display: none;
+		page-break-after: avoid;
+		page-break-inside: avoid;
+	}
+	header h1 {
+		font-size: 60px;
+	}
+	header p {
+		font-size: 30px;
+	}
+	#content-wrapper h2 {
+		font-size: 15px;
+	}
+	#content-wrapper li {
+		font-size: 14px;
+	}
+	li > p{
+		display: none;
+	}
+ }
