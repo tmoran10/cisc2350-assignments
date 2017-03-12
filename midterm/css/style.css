@@ -149,6 +149,9 @@ footer.bio {
 		size: portrait;
 }
 
+/*
+	YE - good print styling
+*/
 @media print{
 	img {
 		display: none;
