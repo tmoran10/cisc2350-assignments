@@ -55,12 +55,14 @@ header h1 {
 
 header p {
 	padding: 0px 0 0 34px;
-	font-size: 20px;
+	/*RESPONSIVE*/
+	font-size: 52px;
 }
 
 #content {
 	float: left;
-	width: 600px;
+	/*RESPONSIVE*/
+	width: 900px;
 	padding: 0px 0px 0px 0px;
 }
 
@@ -107,9 +109,10 @@ img.alignleft {
 }
 
 #sidebar {
-	float: right;
-	width: 240px;
-	padding: 0px 0px 0px 0px;
+	float: left;
+	/*	RESPONSIVE*/
+	width: 900px;
+  padding-left: 100px;
 }
 
 #sidebar ul {
@@ -145,11 +148,32 @@ footer.bio {
 	color: #0000FF;
 }
 
+.mobile{
+	font-size: 35px;
+}
+
 @page{
 		size: portrait;
 }
 
 @media print{
+	.mobile{
+		display: none;
+	}
+	header p{
+		font-size: 20px;
+	}
+	#content {
+		width: 600px;
+	}
+ #sidebar {
+	 float: right;
+	 padding: 0px 0px 0px 0px;
+	 width: 240px;
+ }
+ footer{
+	 display: inline;
+ }
 	img {
 		display: none;
 		page-break-after: avoid;
@@ -170,4 +194,34 @@ footer.bio {
 	li > p{
 		display: none;
 	}
+ }
+
+ @media only screen and (min-width: 1020px){
+	 .mobile{
+		 display: none;
+	 }
+	 header p{
+		 font-size: 20px;
+	 }
+	 #content {
+		 width: 600px;
+	 }
+	#sidebar {
+		float: right;
+		padding: 0px 0px 0px 0px;
+		width: 240px;
+	}
+	footer{
+		display: inline;
+	}
+ }
+
+ @media only screen and (min-width: 240px) and (max-width: 1000px){
+	 footer {
+		 display: none;
+	 }
+	 .post {
+		 padding-left: 100px;
+	 }
+
  }
