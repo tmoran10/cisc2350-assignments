@@ -16,6 +16,7 @@ body.resume {
 	margin: 0 auto;
 	padding: 0;
 }
+
 #header-wrapper {
 	width: 960px;
 	height: 240px;
@@ -37,6 +38,7 @@ header h1, header p {
 	margin: 0;
 	padding: 0;
 }
+
 header h1.bio{
 	color: #FFD700;
 }
@@ -55,13 +57,11 @@ header h1 {
 
 header p {
 	padding: 0px 0 0 34px;
-	/*RESPONSIVE*/
 	font-size: 52px;
 }
 
 #content {
 	float: left;
-	/*RESPONSIVE*/
 	width: 900px;
 	padding: 0px 0px 0px 0px;
 }
@@ -82,7 +82,6 @@ header p {
 	margin-bottom: 25px;
 	padding: 10px 0px 0px 0px;
 }
-
 
 img.border {
 	border: 6px solid #800000;
@@ -110,7 +109,6 @@ img.alignleft {
 
 #sidebar {
 	float: left;
-	/*	RESPONSIVE*/
 	width: 900px;
   padding-left: 100px;
 }
@@ -119,7 +117,6 @@ img.alignleft {
 	margin: 0;
 	padding: 0;
 }
-
 
 #sidebar ul.nostyle{
 	margin: 0;
@@ -223,5 +220,4 @@ footer.bio {
 	 .post {
 		 padding-left: 100px;
 	 }
-
  }
