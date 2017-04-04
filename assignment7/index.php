@@ -9,7 +9,7 @@
   define("BIRTHDAY", "10/31/1994");
 	$food = array("Ramen Noodles", "7/11 Taquitos", "Goldfish");
 	$classes = array("CISC3595" => "Operating Systems", "CISC4090" => "Theory of Computation", "CISC3598" => "Software Engineering", "CISC2200" => "Data Structures");
-	$earned_credits = 68;
+	$earned_credits = 120;
 	$total_credits = 124;
 	$credits_next_classification = 0;
 	$credits_needed = $total_credits - $earned_credits;
