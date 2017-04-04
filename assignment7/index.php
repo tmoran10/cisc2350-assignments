@@ -52,16 +52,16 @@
     <li><?php echo $classes['CISC3598']; ?></li>
     <li><?php echo $classes['CISC2200']; ?></li>
   </ul>
-	<h2>Credits:</h2>
-	<ul>
-		<li>Credits Required to Graduate: <?php echo $total_credits; ?></li>
-		<li>Earned Credits: <?php echo $earned_credits; ?></li>
-		<li>Credits Needed to Graduate: <?php echo $credits_needed; ?></li>
-	</ul>
-	<h2>Classifications:</h2>
-	<ul>
-		<li>I classified as a <?php echo $YOUR_CLASSIFICATION_YEAR; ?></li>
-		<li>I need <?php echo $credits_next_classification ?> credits <?php echo $NEXT_CLASSIFICATION ?></li>
-	</ul>
+  <h2>Credits:</h2>
+  <ul>
+    <li>Credits Required to Graduate: <?php echo $total_credits; ?></li>
+    <li>Earned Credits: <?php echo $earned_credits; ?></li>
+    <li>Credits Needed to Graduate: <?php echo $credits_needed; ?></li>
+  </ul>
+  <h2>Classifications:</h2>
+  <ul>
+    <li>I classified as a <?php echo $YOUR_CLASSIFICATION_YEAR; ?></li>
+    <li>I need <?php echo $credits_next_classification ?> credits <?php echo $NEXT_CLASSIFICATION ?></li>
+  </ul>
 </body>
 </html>
