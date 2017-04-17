@@ -96,7 +96,7 @@
 			$number = 0;
 			do{
 				$classifications = get_next_level($students[$names[$number]]);
-				echo '<li>  Name: <strong>' . str_replace('_', ' ', ucfirst($names[$number])) . '</strong>';
+				echo '<li>  Name: <strong>' . ucwords(str_replace('_', ' ', $names[$number])) . '</strong>';
 				echo '<ul>';
 				echo '<li> Credits Earned: ' . $students[$names[$number]] . '</li>';
 				echo '<li> Credits Neded to Graduate: ' . get_grad_credits($students[$names[$number]]) . '</li>';
