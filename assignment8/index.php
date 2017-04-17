@@ -12,29 +12,46 @@
 	$classes = array("CISC3595" => "Operating Systems", "CISC4090" => "Theory of Computation", "CISC3598" => "Software Engineering", "CISC2200" => "Data Structures");
 	$earned_credits = 120;
 	$total_credits = 124;
-	$credits_next_classification = 0;
-	$credits_needed = $total_credits - $earned_credits;
-	$YOUR_CLASSIFICATION_YEAR = "Default";
-	$NEXT_CLASSIFICATION = "Default";
-	if($earned_credits > 18 && $earned_credits < 42){
-		$YOUR_CLASSIFICATION_YEAR = "Freshman";
-		$credits_next_classification = 42 - $earned_credits;
-		$NEXT_CLASSIFICATION = "to becoma Sophomore";
-	} elseif($earned_credits < 69){
-		$YOUR_CLASSIFICATION_YEAR = "Sophomore";
-		$credits_next_classification = 69 - $earned_credits;
-		$NEXT_CLASSIFICATION = "to become a Junior";
-	} elseif($earned_credits < 99){
-		$YOUR_CLASSIFICATION_YEAR = "Junior";
-		$credits_next_classification = 99 - $earned_credits;
-		$NEXT_CLASSIFICATION = "to become a Senior";
-	} elseif($earned_credits > 99){
-		$YOUR_CLASSIFICATION_YEAR = "Senior";
-		$credits_next_classification = 124 - $earned_credits;
-		$NEXT_CLASSIFICATION = "to Graduate";
-	}else{
-		$YOUR_CLASSIFICATION_YEAR = "Error";
-		$NEXT_CLASSIFICATION = "to become an Error";
+	$credits_needed = get_grad_credits($earned_credits);
+	$next_level = get_next_level($earned_credits);
+	$YOUR_CLASSIFICATION_YEAR = get_student_year($earned_credits);
+	function get_student_year($f_earned_credits){
+		$F_YOUR_CLASSIFICATION_YEAR = "Default";
+		if($f_earned_credits > 18 && $f_earned_credits < 42){
+			$F_YOUR_CLASSIFICATION_YEAR = "Freshman";
+		} elseif($f_earned_credits < 69){
+			$F_YOUR_CLASSIFICATION_YEAR = "Sophomore";
+		} elseif($f_earned_credits < 99){
+			$F_YOUR_CLASSIFICATION_YEAR = "Junior";
+		} elseif($f_earned_credits > 99){
+			$F_YOUR_CLASSIFICATION_YEAR = "Senior";
+		}else{
+			$F_YOUR_CLASSIFICATION_YEAR = "Error";
+		}
+		return($F_YOUR_CLASSIFICATION_YEAR);
+	}
+	function get_grad_credits($f_earned_credits){
+		$f_total_credits = 124;
+		return($f_total_credits - $f_earned_credits);
+	}
+	function get_next_level($f_earned_credits){
+	  $f_next_level = array(0, "Default");
+		if($f_earned_credits > 18 && $f_earned_credits < 42){
+			$f_next_level[0] = 42 - $f_earned_credits;
+			$f_next_level[1] = "Sophomore";
+		} elseif($f_earned_credits < 69){
+			$f_next_level[0] = 69 - $f_earned_credits;
+			$f_next_level[1] = "Junior";
+		} elseif($f_earned_credits < 99){
+			$f_next_level[0] = 99 - $f_earned_credits;
+			$f_next_level[1] = "Senior";
+		} elseif($f_earned_credits > 99){
+			$f_next_level[0] = 124 - $f_earned_credits;
+			$f_next_level[1] = "Graduate";
+		}else{
+			$f_next_level[1] = "Error";
+		}
+		return($f_next_level);
 	}
 ?>
 <body>
@@ -62,7 +79,35 @@
   <h2>Classifications:</h2>
   <ul>
     <li>I classified as a <?php echo $YOUR_CLASSIFICATION_YEAR; ?></li>
-    <li>I need <?php echo $credits_next_classification ?> credits <?php echo $NEXT_CLASSIFICATION ?></li>
+    <li>I need <?php echo $next_level[0]; ?> credits to become a <?php echo $next_level[1]; ?></li>
   </ul>
+	<h2>Students:</h2>
+	<ul>
+		<?php
+			$students = array(
+			'rick' => 124,
+			'morty' => 24,
+			'summer' => 48,
+			'beth' => 75,
+			'jerry' => 32,
+			'bird_man' => 97
+			);
+			$names = array("rick", "morty", 'summer', 'beth', 'jerry', 'bird_man');
+			$number = 0;
+			do{
+				$classifications = get_next_level($students[$names[$number]]);
+				echo '<li>  Name: <strong>' . str_replace('_', ' ', ucfirst($names[$number])) . '</strong>';
+				echo '<ul>';
+				echo '<li> Credits Earned: ' . $students[$names[$number]] . '</li>';
+				echo '<li> Credits Neded to Graduate: ' . get_grad_credits($students[$names[$number]]) . '</li>';
+				echo '<li> Classification Year: ' . get_student_year($students[$names[$number]]) . '</li>';
+				echo '<li> Next Classification: ' . $classifications[1] . '</li>';
+				echo '<li> Credits Needed for Next Classification: ' . $classifications[0] . '</li>';
+				echo '</ul> </li>';
+				$number++;
+			}while($number < 6);
+		?>
+		</li>
+	</ul>
 </body>
 </html>
