@@ -107,7 +107,6 @@
 				$number++;
 			}while($number < 6);
 		?>
-		</li>
 	</ul>
 </body>
 </html>
