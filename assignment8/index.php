@@ -94,6 +94,11 @@
 			);
 			$names = array("rick", "morty", 'summer', 'beth', 'jerry', 'bird_man');
 			$number = 0;
+			/*
+				YE
+				a foreach loop would have been easier here.  Gives you access to the name and the credits within one
+				loop -3pts
+			 */
 			do{
 				$classifications = get_next_level($students[$names[$number]]);
 				echo '<li>  Name: <strong>' . ucwords(str_replace('_', ' ', $names[$number])) . '</strong>';
