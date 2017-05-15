@@ -65,6 +65,9 @@ tr:nth-child(even) {
     display : none;
   }
   button {
+    display : none;
+  }
+  h4 {
     display: none;
   }
  }
