@@ -1,0 +1,57 @@
+body {
+        background: #fff;
+    }
+
+    h1{
+        text-align: center;
+    }
+
+    .col-md-4{
+        border: 2px solid #333;
+        background: #fff;
+        padding: 20px;
+        text-align: center;
+        margin-top: 80px;
+    }
+
+    .pull-right{
+        margin-right: 100px;
+    }
+
+    .pull-left{
+        margin-left: 100px;
+    }
+
+    table {
+    font-family: arial, sans-serif;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+
+    form {
+        margin: 100px auto;
+        width: 250px;
+        padding: 5px 20px;
+        border: 2px ridge #000;
+        background: #fff;
+    }
+
+@media only screen and (min-width: 1020px){
+
+}
+
+@media only screen and (min-width: 240px) and (max-width: 1000px){
+  .computer {
+    display : none;
+  }
+}
